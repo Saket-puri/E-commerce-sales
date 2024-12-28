@@ -31,7 +31,7 @@ def showTables():
     return df
 
 def describeTable(tablename):
-    query = f"describe {tablename};"  # Ensure proper SQL syntax with backticks
+    query = f"DESCRIBE {tablename};"  
     cursor.execute(query)
     rows = cursor.fetchall()
     df = pd.DataFrame(data=rows, columns=cursor.column_names)
